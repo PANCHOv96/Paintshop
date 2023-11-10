@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BarraNavegacionMain from '../components/BarraNavegacionMain.astro';
+import LocalRight from '../components/Nosotros/LocalRight.astro';
+import LocalLeft from '../components/Nosotros/LocalLeft.astro';
+import Footer from "../components/Footer.astro";
+
+const DatosLocales = [
+    {
+        direccion : 'AV. JUAN DOMINGO PERON',
+        localidad : 'Rafaela',
+        horarios : 'Lun a Vie: 8 a 17hs. Sab: 8 a 12hs.',
+        telefono : '03492 501501 / 505505',
+        celular : '+54 3492 585858',
+        correo : 'administracion@paintshop.com',
+        imagen: '../Imagen/ImagenSucursal1.jpg'
+    },
+    {
+        direccion : 'AV. JUAN DOMINGO PERON',
+        localidad : 'Rafaela',
+        horarios : 'Lun a Vie: 8 a 17hs. Sab: 8 a 12hs.',
+        telefono : '03492 501501 / 505505',
+        celular : '+54 3492 585858',
+        correo : 'administracion@paintshop.com',
+        imagen: '../Imagen/ImagenSucursal2.jpg'
+    },
+]
+---
+
+<Layout title="NOSOTROS">
+    <div class="ColorFondo">
+        <BarraNavegacionMain/>
+    </div>
+    <div class="Descripcion">
+        <h2>NOSOTROS</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur. Non pellentesque sed lacinia id. Ac tristique facilisis quisque aliquet in quis risus euismod tellus. 
+            A fames rhoncus a tellus lacinia. Nisl facilisi dictumst lobortis nunc lectus tortor pellentesque et. Lacus dignissim ornare egestas non sit. 
+            Massa sit et egestas mattis leo at. In pellentesque morbi sed enim mollis consectetur nunc sit. Ipsum amet accumsan diam duis. 
+            Cursus elementum semper lacus placerat ac malesuada molestie. Non consequat lacus nisi condimentum lacinia. Sed aenean vel felis nullam fringilla.
+            Eget malesuada egestas nec in. Sociis hac purus viverra feugiat lacinia urna arcu sapien. Nisl ut faucibus neque aliquet cursus viverra. 
+            Pharetra et etiam neque diam sagittis purus suspendisse ridiculus. Non faucibus dolor sit venenatis gravida nisi tortor sagittis eu. 
+            Integer sapien auctor dolor nunc. Sit ac tempor ut morbi. Viverra enim quis sed hendrerit morbi montes odio. Vitae id leo ut nec placerat proin ut eget interdum. 
+            Justo mauris vulputate sit nulla diam egestas eleifend cursus. Faucibus tristique purus ultricies ornare vitae adipiscing tortor. 
+            Pellentesque quam at odio amet quam fringilla. Pulvinar sed viverra viverra iaculis luctus mauris ultrices accumsan ac. Tempus fusce urna congue sapien convallis. 
+            Et justo nec volutpat enim morbi tempor enim sem facilisis. Urna eu faucibus morbi in penatibus.
+            Cursus pellentesque ut mauris egestas eu dui. Id iaculis consectetur dui enim. Tristique euismod enim nullam id. Enim augue lacus pharetra sapien consectetur quam ut sed cursus. 
+            Venenatis phasellus aliquam eget mauris enim ligula. Pharetra lectus dictumst nulla tortor praesent tristique eget vulputate felis. In gravida facilisi sed egestas id elit tellus. 
+            Consequat est in risus magna vestibulum orci iaculis. Mi elit blandit lacus at senectus auctor pellentesque sodales. Facilisi ac in pellentesque sed vitae. 
+            Pharetra at mi mattis eleifend iaculis lorem turpis felis. Porttitor lacinia amet tellus blandit nunc. Nisl faucibus purus risus facilisi. 
+            Tristique neque mauris molestie in mauris condimentum scelerisque nisl. Nunc facilisis sed porta eu non. Aliquet id tincidunt in luctus ultricies odio.
+        </p>
+    </div>
+    <div class="Sucursales">
+        <h2>SUCURSALES</h2>
+        {DatosLocales.map((Datos,Index)=>{
+            if(Index%2 == 0){
+                return <LocalRight DatosLocal={Datos}/>
+            }else{
+                return <LocalLeft DatosLocal={Datos}/> 
+            }
+        })}
+    </div>
+	<Footer/>  
+</Layout>
+<style>
+    .ColorFondo{
+        background-color: #1D1414;
+    }
+    h2{
+        text-align: center;
+        font-size: 64px;
+        margin: 100px 0;
+    }
+    p{
+        margin: 0 auto;
+        width: 840px;
+        font-size: 20px;
+    }
+    .Descripcion , h2{
+        color: #000;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+    .Descripcion{
+        margin-bottom: 50px;
+    }
+</style>

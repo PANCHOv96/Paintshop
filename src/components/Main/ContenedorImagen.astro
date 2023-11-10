@@ -1,0 +1,103 @@
+<div class="ContenedorImagenes">
+    <div class="Arriba">
+        <div>
+            <div class="Imagenes">
+                <img src="Imagen/ContenedorImagen1.jpg" alt="Imagen compra por color">
+            </div>
+            <h3>COMPRA POR COLOR</h3>
+        </div>
+        <div>
+            <div class="Imagenes">
+                <img src="Imagen/ContenedorImagen2.jpg" alt="Imagen compra por rango">
+            </div>
+            <h3>COMPRA POR RANGO</h3>
+        </div>
+    </div>
+    <div class="Abajo">
+        <div>
+            <div class="Imagenes">
+                <img src="Imagen/ContenedorImagen3.jpg" alt="Imagen encontra inspiracion">
+            </div>
+            <h3>ENCONTRA INSPIRACION</h3>
+        </div>
+        <div>
+            <div class="Imagenes">
+                <img src="Imagen/ContenedorImagen4.jpg" alt="Imagen consulta de color">
+            </div>
+            <h3>CONSULTA DE COLOR</h3>
+        </div>
+    </div>
+</div>
+<style>
+    .ContenedorImagenes{
+        max-width: 1270px;
+        width: 95%;
+        flex-shrink: 0;
+        margin: 50px auto;
+        display: flex;
+        justify-content:space-between;
+        gap: 20px;
+    }
+    @media (max-width: 480px) {
+        .ContenedorImagenes{
+            max-width: 355px;
+            flex-wrap: wrap;
+        }
+    }
+    .ContenedorImagenes div.Arriba , .ContenedorImagenes div.Abajo{     
+        padding-bottom: 10px; 
+        width: 100%;
+        transition: all ease-in-out 1s;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .Imagenes{
+        max-width: 299px;
+        max-height: 312px;
+        overflow: hidden;
+        opacity: 75%;
+    }
+    @media (max-width: 480px){
+        .Imagenes{
+            width: 170px;
+            height: 218px;
+            opacity: 100%;
+        }
+    }
+    .Imagenes img{
+        width: 100%; 
+        height: 100%;
+        object-fit: cover;
+    }
+    div.Imagenes:hover{
+        opacity: 100%;
+        transition: all ease-in-out 1s;
+    }
+    div.Arriba div:first-child div.Imagenes{
+        border-radius: 0px 0px 0px 60px;
+    }
+    div.Abajo div:last-child div.Imagenes{
+        border-radius: 0px 60px 0px 0px;
+    }
+    @media (max-width: 480px){
+        .ContenedorImagenes div div div.Imagenes{
+            border-radius: 0px;
+        }
+        div.Arriba div:last-child div.Imagenes{
+            border-radius: 0px 60px 0px 0px;
+        }
+        div.Abajo div:first-child div.Imagenes{
+            border-radius: 0px 0px 0px 60px;
+        }
+    }
+    .ContenedorImagenes h3{
+        color: #191919;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin: 10px 0 0 0;
+    }
+</style>

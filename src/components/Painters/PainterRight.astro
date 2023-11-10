@@ -1,0 +1,40 @@
+---
+    import ContenedorDatos from '../Painters/DataContainer.astro';
+
+    interface Props {
+        DatosPintor: { nombre: string, tipoPintor: string, Descripcion: string , imagen: string}
+    }
+
+    const { DatosPintor } = Astro.props;
+---
+<div class="DatosPintor">
+    <img src=`${DatosPintor.imagen}` alt="">
+    <div class="Datos">
+        <ContenedorDatos DatosPintor={DatosPintor}/>
+    </div>
+</div>
+<style>
+    .DatosPintor{
+        width: 1262px;
+        height: 500px;
+        margin: 30px auto;
+        position: relative;
+    }
+    img{
+        width: 430px;
+        height: 498px;
+        border: 1px solid #000;
+        object-fit: cover;
+    }
+    .Datos{
+        width: 932px;
+        height: 350px;
+        background-color: #14161D;
+        position: absolute;
+        top: 100px;
+        left: 330px;
+        border-radius: 5px 100px 5px 5px;
+        background: #14161D;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+</style>

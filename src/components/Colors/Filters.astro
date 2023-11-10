@@ -1,0 +1,87 @@
+<ul>
+    <li class="Menu">
+        <div>
+            COLORES 
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15" fill="none">
+                <path d="M9 15L17.6603 0H0.339746L9 15Z" fill="black"/>
+            </svg>
+        </div>
+        <!-- <div class="DropDown">
+            <ul>
+                <li>ROJO</li>
+                <li>AMARILLO</li>
+                <li>VERDE</li>
+                <li>MORADO</li>
+                <li>AZUL</li>
+            </ul>
+        </div> -->
+    </li>
+    <li>
+        <div>
+            TERMINACION 
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15" fill="none">
+                <path d="M9 15L17.6603 0H0.339746L9 15Z" fill="black"/>
+            </svg>
+        </div>
+    </li>
+    <li>
+        <div>
+            RANGO 
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15" fill="none">
+                <path d="M9 15L17.6603 0H0.339746L9 15Z" fill="black"/>
+            </svg>
+        </div>
+    </li>
+    <li>
+        <div>
+            ESTILO 
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15" fill="none">
+                <path d="M9 15L17.6603 0H0.339746L9 15Z" fill="black"/>
+            </svg>
+        </div>
+    </li>
+    <li>
+        <div>
+            TIPO 
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15" fill="none">
+                <path d="M9 15L17.6603 0H0.339746L9 15Z" fill="black"/>
+            </svg>
+        </div>
+    </li>
+</ul>
+<style>
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        color: black;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        gap: 47px;
+    }
+    ul li:hover{
+        cursor: pointer;
+    }
+    .Menu{
+        position: relative;
+    }
+    .DropDown{
+        position: absolute;
+        z-index: 1;
+    }
+    .DropDown>ul{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 0;
+        gap: 5px;
+    }
+    .DropDown>ul>li{
+        background-color: red;
+        margin: 10;
+        width: 100%;
+    }
+</style>

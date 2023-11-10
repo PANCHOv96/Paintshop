@@ -1,0 +1,162 @@
+<div class="ServiciosAsesoramiento">
+    <h3>SERVICIOS Y ASESORAMIENTO</h3>
+    <div class="Grupos">
+        <div>
+            <a href="#">
+                <div class="Header">
+                    <h4>CONSULTORIA DE COLOR</h4>
+                    <img src="../Imagen/ServiciosAsesoramiento1.jpg" alt="Imagen Consultoria de color">
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur. Laoreet odio et etiam blandit id arcu risus ac massa. 
+                    Vestibulum vitae aliquam blandit morbi nunc vehicula. Posuere quis at posuere nibh. 
+                    Proin proin consequat at placerat accumsan ipsum nam libero.
+                </p>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <div class="Header">
+                    <h4>CALCULADORA DE PINTURA</h4>
+                    <img src="../Imagen/ServiciosAsesoramiento2.jpg" alt="Imagen Calculadora de pintura">
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur. Laoreet odio et etiam blandit id arcu risus ac massa. 
+                    Vestibulum vitae aliquam blandit morbi nunc vehicula. Posuere quis at posuere nibh. 
+                    Proin proin consequat at placerat accumsan ipsum nam libero.
+                </p>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <div class="Header">
+                    <h4>QUIENES SOMOS</h4>
+                    <img src="../Imagen/ServiciosAsesoramiento3.jpg" alt="Imagen Quienes somos">
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur. Laoreet odio et etiam blandit id arcu risus ac massa. 
+                    Vestibulum vitae aliquam blandit morbi nunc vehicula. Posuere quis at posuere nibh. 
+                    Proin proin consequat at placerat accumsan ipsum nam libero.
+                </p>
+            </a>
+        </div>
+        <div>
+            <div class="Header">
+                <h4>INICIATIVAS SOSTENIBLES</h4>
+                <img src="../Imagen/ServiciosAsesoramiento4.jpg" alt="Imagen Iniciativas sostenibles">
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur. Laoreet odio et etiam blandit id arcu risus ac massa. 
+                Vestibulum vitae aliquam blandit morbi nunc vehicula. Posuere quis at posuere nibh. 
+                Proin proin consequat at placerat accumsan ipsum nam libero.
+            </p>
+        </div>
+    </div>
+</div>
+<style>
+    h3{
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+    .ServiciosAsesoramiento{
+        max-width: 1270px;
+        /* height: 500px; */
+        width: 95%;
+        flex-shrink: 0;
+        margin: 50px auto;
+    }
+    @media (max-width: 480px) {
+        .ServiciosAsesoramiento{
+            max-width: 355px;
+        }
+    }
+    .Grupos{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    @media (max-width: 480px){
+        .Grupos{
+            flex-direction: column;
+        }
+    }
+    .Grupos div a,.Grupos div{
+        width: 283px;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+    @media (max-width: 480px) {
+        .Grupos div a , .Grupos div{
+            width: 355px;
+        }
+    }
+    .Grupos .Header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+    }
+    @media (max-width: 480px) {
+        .Grupos .Header{
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+    }
+    .Grupos .Header h4{
+        -webkit-transform: rotate(-90deg); 
+        -moz-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin: 0;
+        white-space: nowrap;
+        width: 30px;
+    }
+    @media (max-width: 480px) {
+        .Grupos .Header h4{
+            -webkit-transform: rotate(0deg); 
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            width: 100%;
+            text-align: left;
+        }
+    }
+    .Grupos .Header img{
+        width: 250px;
+        height: 300px;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+    @media (max-width: 480px){
+        .Grupos .Header img{
+            width: 355px;
+        }
+    }
+    .Grupos p{
+        width: 250px;
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+    @media (max-width: 480px) {
+        .Grupos p{
+            width: 100%;
+        }
+    }
+    a{
+        text-decoration: none;
+    }
+</style>

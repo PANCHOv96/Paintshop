@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BarraNavegacionMain from '../components/BarraNavegacionMain.astro';
+import Filters from '../components/Colors/Filters.astro';
+import Colors from '../components/Colors/Colors.astro';
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="COLORES">
+	<div class="ColorFondo">
+		<BarraNavegacionMain/>
+		<h2>COLORES</h2>
+	</div>
+	<Filters/>  
+	<Colors/>  
+	<Footer/>  
+</Layout>
+
+<style>
+    .ColorFondo{
+		--opacidad-negro: 0.5;
+    	background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("Imagen/2.jpg");
+		max-width: 100dvw;
+		height: 50dvh;
+		object-fit: cover;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		overflow: hidden;
+	}
+	h2{
+		text-align: center;
+		flex-shrink: 0;
+		color: #F7F7F7;
+		font-size: 64px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: normal;
+	}
+</style>

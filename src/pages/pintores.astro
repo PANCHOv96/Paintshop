@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BarraNavegacionMain from '../components/BarraNavegacionMain.astro';
+import Filters from '../components/Painters/Filters.astro';
+import PintorRight from '../components/Painters/PainterRight.astro';
+import PintorLeft from '../components/Painters/PainterLeft.astro';
+import Footer from "../components/Footer.astro";
+import BtnCargarMas from "../components/BtnCargarMas.astro";
+
+
+const DatosPintores = [
+    {
+        nombre : 'Agustina Sosa',
+        tipoPintor : 'Pintor de Obra',
+        Descripcion : `Lorem ipsum dolor sit amet consectetur. 
+        Elementum ornare massa elementum cursus semper massa id morbi. Ante lacus scelerisque semper erat adipiscing cursus ac. Turpis molestie ut quisque sit. 
+        Vulputate nullam id amet netus risus non.`,
+        imagen : "../Imagen/ImagenPintor1.jpg"
+    },
+    {
+        nombre : 'ROBERTO CONTRERA',
+        tipoPintor : 'Pintor de Obra',
+        Descripcion : `Lorem ipsum dolor sit amet consectetur. 
+        Elementum ornare massa elementum cursus semper massa id morbi. Ante lacus scelerisque semper erat adipiscing cursus ac. Turpis molestie ut quisque sit. 
+        Vulputate nullam id amet netus risus non.`,
+        imagen : "../Imagen/ImagenPintor2.jpg"
+    },
+    {
+        nombre : 'Agustina Sosa',
+        tipoPintor : 'Pintor de Obra',
+        Descripcion : `Impermeabilización de techos y pintura en general.`,
+        imagen : "../Imagen/ImagenPintor3.jpg"
+    },
+    {
+        nombre : 'ROBERTO CONTRERA',
+        tipoPintor : 'Pintor de Obra',
+        Descripcion : `Lorem ipsum dolor sit amet consectetur. 
+        Elementum ornare massa elementum cursus semper massa id morbi. Ante lacus scelerisque semper erat adipiscing cursus ac. Turpis molestie ut quisque sit. 
+        Vulputate nullam id amet netus risus non.`,
+        imagen : "../Imagen/ImagenPintor4.jpg"
+    },
+]
+---
+
+<Layout title="PINTORES">
+    <div class="ColorFondo">
+        <BarraNavegacionMain/>
+    </div>
+    <div class="Descripcion">
+        <h2>PINTORES</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur. 
+            Est id gravida massa volutpat. Mauris tincidunt egestas vulputate pretium. 
+            Fusce sollicitudin vitae convallis integer a aliquam potenti. 
+            Id amet tincidunt non aliquam.
+        </p>
+    </div>
+    <Filters/>
+    {DatosPintores.map((Datos,Index)=>{
+        if(Index%2 == 0){
+            return <PintorRight DatosPintor={Datos}/>
+        }else{
+            return <PintorLeft DatosPintor={Datos}/> 
+        }
+    })}
+    <BtnCargarMas/>
+	<Footer/>  
+</Layout>
+<style>
+    .ColorFondo{
+        background-color: #1D1414;
+    }
+    h2{
+        text-align: center;
+        font-size: 64px;
+        margin: 100px 0;
+    }
+    p{
+        margin: 0 auto;
+        width: 840px;
+        font-size: 20px;
+    }
+    .Descripcion , h2{
+        color: #000;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+    .Descripcion{
+        margin-bottom: 50px;
+    }
+</style>

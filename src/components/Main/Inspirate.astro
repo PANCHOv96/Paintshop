@@ -1,0 +1,107 @@
+<div class="Inspirate">
+    <h3>INSPIRATE</h3>
+    <div class="ImagenesInspirate">
+        <img src="../Imagen/ImagenesInspirate1.jpg" alt="Imagen Inspirate 1">
+        <img src="../Imagen/ImagenesInspirate2.jpg" alt="Imagen Inspirate 2">
+        <img src="../Imagen/ImagenesInspirate3.jpg" alt="Imagen Inspirate 3">
+        <img src="../Imagen/ImagenesInspirate4.jpg" alt="Imagen Inspirate 4">
+        <img src="../Imagen/ImagenesInspirate5.jpg" alt="Imagen Inspirate 5">
+        <img src="../Imagen/ImagenesInspirate6.jpg" alt="Imagen Inspirate 6">
+        <img src="../Imagen/ImagenesInspirate7.jpg" alt="Imagen Inspirate 7">
+        <div class="GaleriaInspirate">
+            <h4>GALERIA DE INSPIRACION</h4>
+            <div class="Boton">
+                <a href="#">ECONTRAR</a>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    h3{
+        color: #000;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+    .Inspirate{
+        max-width: 1270px;
+        width: 95%;
+        flex-shrink: 0;
+        margin: 50px auto;
+    }
+    @media (max-width: 480px) {
+        .Inspirate{
+            max-width: 355px;
+        }
+    }
+    .ImagenesInspirate{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .ImagenesInspirate img{
+        width: 316px;
+        height: 285px;
+        object-fit: cover;
+    }
+    @media (max-width: 480px) {
+        .ImagenesInspirate img{
+            width: 50%;
+        }
+        .ImagenesInspirate img:nth-child(n+5){
+            display: none;
+        }
+    }
+    .GaleriaInspirate{
+        background-color: #1D1414;
+        color: #F7F7F7;
+        width: 316px;
+        height: 285px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        transition: all ease-in-out 1s;
+    }
+    @media(max-width: 480px){
+        .GaleriaInspirate{
+            width: 355px;
+            height: 125px;
+        }
+    }
+    .GaleriaInspirate h4{
+        width: 155px;
+        height: 47px;
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 0;
+    }
+    .GaleriaInspirate a{
+        color: #1D1414;
+        text-decoration: none;
+        background-image: linear-gradient(to right ,#1D1414 50%, #D9D9D9 50%);
+		background-size: 250%;
+		background-repeat: no-repeat;
+		background-position: right;
+        width: 165px;
+        height: 32px;
+        border-radius: 50px;
+        padding: 7px 34px;
+        transition: all ease-in-out 1s;
+    }
+    .GaleriaInspirate:Hover{
+        background-color: rgba(29,20,20,0.3) /* #1D1414 */;
+        color: #1D1414;
+        transition: all ease-in-out 2s;
+    }
+    .GaleriaInspirate a:hover{
+        background-position: left;
+		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+		color: #D9D9D9;
+		transition: all ease-in-out 1s;
+    }
+</style>
