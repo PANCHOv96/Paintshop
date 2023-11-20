@@ -41,6 +41,7 @@
         flex-wrap: wrap;
     }
     .ImagenesInspirate img{
+        max-width: 316px;
         width: 316px;
         height: 285px;
         object-fit: cover;
@@ -53,9 +54,23 @@
             display: none;
         }
     }
+    @media  (min-width: 992px) and (max-width:1199px) {
+        .ImagenesInspirate img{
+            width: 50%;
+        }
+        .ImagenesInspirate img:nth-child(n+7){
+            display: none;
+        }
+    }
+    @media (min-width: 1200px) and (max-width: 1399px){
+        .ImagenesInspirate img{
+            width: 304px;
+        }
+    }
     .GaleriaInspirate{
         background-color: #1D1414;
         color: #F7F7F7;
+        max-width: 316px;
         width: 316px;
         height: 285px;
         display: flex;
@@ -68,6 +83,16 @@
         .GaleriaInspirate{
             width: 355px;
             height: 125px;
+        }
+    }
+    @media(min-width: 992px) and (max-width:1199px){
+        .GaleriaInspirate{
+            width: 100%;
+        }
+    }
+    @media (min-width: 1200px) and (max-width: 1399px){
+        .GaleriaInspirate{
+            width: 304px;
         }
     }
     .GaleriaInspirate h4{

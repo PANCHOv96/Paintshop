@@ -62,9 +62,29 @@ import Footer from "../components/Footer.astro";
 		line-height: normal;
 	}
 	@media (max-width: 480px){
+		.MensajeBienvenida{
+			justify-content: start;
+		}
 		.MensajeBienvenida h2{
-			max-width: 355px;
+			max-width: 95%;
 			max-height: 125px;
+			font-size: 36px;
+		}
+	}
+	@media (min-width: 992px) and (max-width:1199px){
+		.ImagenPrincipal{
+			justify-content: start;
+		}
+		.MensajeBienvenida{
+			align-items: center;
+		}
+		.MensajeBienvenida h2{
+			max-width: 95%;
+			max-height: 125px;
+			font-size: 60px;
+			text-align: center;
+		}
+		.MensajeBienvenida .BotonVerPinturas{
 			font-size: 36px;
 		}
 	}
@@ -100,3 +120,6 @@ import Footer from "../components/Footer.astro";
 		}
 	}
 </style>
+
+
+

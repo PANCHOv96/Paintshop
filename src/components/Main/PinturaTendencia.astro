@@ -63,10 +63,20 @@
             max-height: 454px;
         }
     }
+    @media (min-width: 992px) and (max-width:1199px) {
+        .PinturaTendencia{
+           max-height: 100%;
+        }
+    }
     .Carrusel{
         display: flex;
     }
     @media (max-width: 480px){
+        .Carrusel{
+            flex-direction: column;
+        }
+    }
+    @media (min-width: 992px) and (max-width:1199px){
         .Carrusel{
             flex-direction: column;
         }
@@ -85,6 +95,13 @@
         .Carrusel div{
             width: 355px;
             height: 35px;
+            justify-content: center;
+        }
+    }
+    @media (min-width: 992px) and (max-width:1199px) {
+        .Carrusel div{
+            width: 961px;
+            height: 70px;
             justify-content: center;
         }
     }
@@ -112,6 +129,16 @@
             padding: 0 0 0 15px;
         }
     }
+    @media (min-width: 992px) and (max-width:1199px) {
+        .Carrusel div h4{
+            -webkit-transform: rotate(0); 
+            -moz-transform: rotate(0);
+            -o-transform: rotate(0);
+            transform: rotate(0);
+            padding: 0 0 0 15px;
+            font-size: 24px;
+        }
+    }
     .Carrusel div.Activo h4{
         -webkit-transform: rotate(0); 
         -moz-transform: rotate(0);
@@ -121,6 +148,14 @@
         transition: all ease-in-out 1s;
     }
     @media (max-width: 480px){
+        .Carrusel div.Activo h4{
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px 0 0 15px;
+            text-align: left;
+        }
+    }
+    @media (min-width: 992px) and (max-width:1199px){
         .Carrusel div.Activo h4{
             width: 100%;
             margin: 0 auto;
@@ -150,6 +185,18 @@
             align-items: center;
         }
     }
+    @media (min-width: 992px) and (max-width:1199px){
+        .Carrusel div.Activo{
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    @media (min-width: 1200px){
+        .Carrusel div.Activo{
+            width: 75%;
+        }
+    }
     .Carrusel div.Activo img{
         width: 308.252px;
         height: 300px;
@@ -164,6 +211,13 @@
         .Carrusel div.Activo img{
             width: 320px;
             height: 150px;
+            margin: 0 auto 22px auto;
+        }
+    }
+    @media (min-width: 992px) and (max-width:1199px){
+        .Carrusel div.Activo img{
+            width: 95%;
+            height: 75%;
             margin: 0 auto 22px auto;
         }
     }
