@@ -1,54 +1,92 @@
-<ul>
-    <li class="Menu">
-        <div>
-            TIPO 
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15" fill="none">
-                <path d="M9 15L17.6603 0H0.339746L9 15Z" fill="black"/>
-            </svg>
-        </div>
-        <!-- <div class="DropDown">
-            <ul>
-                <li>ROJO</li>
-                <li>AMARILLO</li>
-                <li>VERDE</li>
-                <li>MORADO</li>
-                <li>AZUL</li>
-            </ul>
-        </div> -->
-    </li>
-    <li>
-        <div>
-            PROVINCIA 
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15" fill="none">
-                <path d="M9 15L17.6603 0H0.339746L9 15Z" fill="black"/>
-            </svg>
-        </div>
-    </li>
-    <li>
-        <div>
-            LOCALIDAD 
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15" fill="none">
-                <path d="M9 15L17.6603 0H0.339746L9 15Z" fill="black"/>
-            </svg>
-        </div>
-    </li>
-</ul>
+<div class="Filter">
+    <div class="MenuHamburguesaFiltro">
+        <svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 68 68" fill="none">
+            <path d="M11.3333 17H56.6666V22.6667H11.3333V17ZM11.3333 31.1667H56.6666V36.8333H11.3333V31.1667ZM11.3333 45.3333H56.6666V51H11.3333V45.3333Z" fill="#1D1414"/>
+        </svg>
+    </div>
+    <ul class="FiltroPintores">
+        <li class="Menu">
+            <div>
+                TIPO 
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15" fill="none">
+                    <path d="M9 15L17.6603 0H0.339746L9 15Z" fill="black"/>
+                </svg>
+            </div>
+            <!-- <div class="DropDown">
+                <ul>
+                    <li>ROJO</li>
+                    <li>AMARILLO</li>
+                    <li>VERDE</li>
+                    <li>MORADO</li>
+                    <li>AZUL</li>
+                </ul>
+            </div> -->
+        </li>
+        <li>
+            <div>
+                PROVINCIA 
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15" fill="none">
+                    <path d="M9 15L17.6603 0H0.339746L9 15Z" fill="black"/>
+                </svg>
+            </div>
+        </li>
+        <li>
+            <div>
+                LOCALIDAD 
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15" fill="none">
+                    <path d="M9 15L17.6603 0H0.339746L9 15Z" fill="black"/>
+                </svg>
+            </div>
+        </li>
+    </ul>
+</div>
 <style>
-    ul{
+    .FiltroPintores{
         list-style: none;
         display: flex;
         justify-content: center;
-        align-items: start;
+        align-items: center;
         color: black;
         font-size: 20px;
         font-style: normal;
         font-weight: 300;
         line-height: normal;
-        gap: 47px;    
-        margin: 0;    
-        padding-bottom: 30px;
+        gap: 15px;
+        flex-direction: column;
+        padding: 0;
+        display: none;
     }
-    ul li:hover{
+    .FiltroPintores.Activo{
+        display: flex;
+        animation: MostrarBarra 1s;
+    }
+    @keyframes MostrarBarra {
+        from {
+            opacity: 0;
+            width: 30%;
+        }
+        to {
+            opacity: 1;
+            width: 100%;
+        }
+    }
+    @media (min-width: 768px){
+        .FiltroPintores{
+            display: flex;
+            flex-direction: row;
+            gap: 47px;
+        }
+    }
+    .MenuHamburguesaFiltro{
+		display: block;
+        text-align: center;
+	}
+	@media(min-width: 768px){
+		.MenuHamburguesaFiltro{
+			display: none;
+		}
+	}
+    .FiltroPintores li:hover{
         cursor: pointer;
     }
     .Menu{
@@ -71,3 +109,16 @@
         width: 100%;
     }
 </style>
+<script>
+    let MenuHamburguesaFiltro = document.querySelector('.MenuHamburguesaFiltro');
+	MenuHamburguesaFiltro?.addEventListener('click',()=>{
+		var Navegacion = document.querySelector('.FiltroPintores');
+        console.log(Navegacion)
+		if(!Navegacion?.classList.contains('Activo'))
+		{
+			Navegacion?.classList.add("Activo");
+		}else{
+			Navegacion?.classList.remove("Activo");
+		}
+	})
+</script>
