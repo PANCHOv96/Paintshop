@@ -12,13 +12,23 @@
     .boton a{
         flex-shrink: 0;
         border-radius: 50px;
-        background: #D9D9D9;
+        /* background: #D9D9D9; */
+        background-image: linear-gradient(to right ,#1D1414 50%, #D9D9D9 50%);
+		background-size: 250%;
+		background-repeat: no-repeat;
+		background-position: right;
         color: #000;
-        font-size: 40px;
+        font-size: 24px;
         font-style: normal;
         font-weight: 300;
         line-height: normal;
 		text-decoration: none;
         padding: 17px 47px;
+	}
+    .boton a:hover{
+		background-position: left;
+		border:1px solid rgba(217,217,217,0.2) /* es el #D9D9D9 */;
+		color: #D9D9D9;
+		transition: all ease-in-out 1s;
 	}
 </style>

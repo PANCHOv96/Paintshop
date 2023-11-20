@@ -3,50 +3,61 @@ import BtnCargarMas from "../BtnCargarMas.astro";
 ---
 
 <div class="GrupoColores">
-    <div class="Color">
-        <p>ROJO</p>
-        <!-- <img src="" alt=""> -->
+    <div class="Color" style="background-color: #8b4513;">
+        <p>#8b4513</p>
+        <img src="./Imagen/ImagenesColores1.jpg" alt="">
     </div>
-    <div class="Color">
-        <p>VERDE</p>
-        <!-- <img src="" alt=""> -->
+    <div class="Color" style="background-color: #bc8f8f;">
+        <p>#bc8f8f</p>
+        <img src="./Imagen/ImagenesColores2.jpg" alt="">
     </div>
-    <div class="Color">
-        <p>AZUL</p>
-        <!-- <img src="" alt=""> -->
+    <div class="Color" style="background-color: #c0c0c0;">
+        <p>#c0c0c0</p>
+        <img src="./Imagen/ImagenesColores3.jpg" alt="">
     </div>
-    <div class="Color">
-        <p>ROJO</p>
-        <!-- <img src="" alt=""> -->
+    <div class="Color" style="background-color: #dcea90;">
+        <p>#dcea90</p>
+        <img src="./Imagen/ImagenesColores4.jpg" alt="">
     </div>
-    <div class="Color">
-        <p>VERDE</p>
-        <!-- <img src="" alt=""> -->
+    <div class="Color" style="background-color: #2f4f4f;">
+        <p>#2f4f4f</p>
+        <img src="./Imagen/ImagenesColores5.jpg" alt="">
     </div>
-    <div class="Color">
-        <p>AZUL</p>
-        <!-- <img src="" alt=""> -->
+    <div class="Color" style="background-color: #c57f3f;">
+        <p>#c57f3f</p>
+        <img src="./Imagen/ImagenesColores6.jpg" alt="">
     </div>
-    <div class="Color">
-        <p>VERDE</p>
-        <!-- <img src="" alt=""> -->
+    <div class="Color" style="background-color: #f4a460;">
+        <p>#f4a460</p>
+        <img src="./Imagen/ImagenesColores7.jpg" alt="">
     </div>
-    <div class="Color">
-        <p>AZUL</p>
-        <!-- <img src="" alt=""> -->
+    <div class="Color" style="background-color: #5f9ea0;">
+        <p>#5f9ea0</p>
+        <img src="./Imagen/ImagenesColores8.jpg" alt="">
     </div>
+    
 </div>
 <BtnCargarMas/>
 <style>
     .GrupoColores{
-        width: 1644px;
-        margin: 30px auto 50px auto;
+        max-width: 1920px;
+        width: 95%;
+        margin: 20px auto 20px auto;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         grid-gap: 20px;
     }
+    @media (min-width: 768px) and (max-width:1199px) {
+        .GrupoColores{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @media (min-width:1200px) {
+        .GrupoColores{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
     .Color{
-        width: 354px;
         height: 370px;
         background: #394736;
         display: flex;
@@ -54,6 +65,9 @@ import BtnCargarMas from "../BtnCargarMas.astro";
         flex-direction: column;
         align-items: center;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        position: relative;
+        z-index: 10;
     }
     .Color p {
         margin: 0;
@@ -61,7 +75,45 @@ import BtnCargarMas from "../BtnCargarMas.astro";
         text-align: center;
         font-size: 24px;
         font-style: normal;
-        font-weight: 300;
+        font-weight: 400;
         line-height: normal;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        z-index: 1;
+        transition: all 1s ease-in-out;
+        flex: 1;
+    }
+    img{
+        position: absolute;
+        visibility: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        opacity: 100%;
+        object-fit: cover;
+        z-index: 0;
+        overflow: hidden;
+    }
+    .Color:hover img{
+        visibility: visible;
+        animation: MostrarImagen 2s;
+    }
+    .Color:hover p{
+        flex: 0;
+        transition: all 1s ease-in-out;
+    }
+    @keyframes MostrarImagen {
+        from {
+            opacity: 0%;
+            filter: blur(1px);
+        }
+        to {
+            opacity: 100%;
+            filter: blur(0px);
+        }
     }
 </style>
