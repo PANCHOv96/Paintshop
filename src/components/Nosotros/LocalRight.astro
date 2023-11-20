@@ -23,26 +23,48 @@
 </div>
 <style>
     .DatosPintor{
-        width: 1262px;
+        max-width: 1262px;
+        width: 95%;
         height: 500px;
         margin: 30px auto;
         position: relative;
     }
     img{
-        width: 430px;
+        max-width: 430px;
+        width: 100%;
         height: 498px;
         border: 1px solid #000;
         object-fit: cover;
     }
     .Datos{
-        width: 932px;
+        max-width: 932px;
+        width: 100%;
         height: 350px;
         background-color: #14161D;
         position: absolute;
-        top: 100px;
+        bottom: 0px;
+        left: 0px;
+        /* top: 100px;
         left: 330px;
-        border-radius: 5px 100px 5px 5px;
+        border-radius: 5px 100px 5px 5px; */
         background: #14161D;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        opacity: 65%;
+    }
+    @media (min-width: 768px) and (max-width:1199px) {
+        .Datos{
+            bottom: 10px;
+            left: 0px; 
+            border-radius: 5px 100px 5px 5px;
+            opacity: 70%;
+        }
+    }
+    @media (min-width:1200px) {
+        .Datos{
+            top: 100px;
+            left: 300px; 
+            border-radius: 5px 100px 5px 5px;
+            opacity: 70%;
+        }
     }
 </style>
