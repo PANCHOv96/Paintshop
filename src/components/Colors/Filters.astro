@@ -5,14 +5,14 @@
         </svg>
     </div>
     <ul class="FiltroColores">
-        <li class="Menu">
-            <div>
+        <li>
+            <div class="Menu">
                 COLORES 
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15" fill="none">
                     <path d="M9 15L17.6603 0H0.339746L9 15Z" fill="black"/>
                 </svg>
             </div>
-            <!-- <div class="DropDown">
+            <div class="DropDown">
                 <ul>
                     <li>ROJO</li>
                     <li>AMARILLO</li>
@@ -20,38 +20,74 @@
                     <li>MORADO</li>
                     <li>AZUL</li>
                 </ul>
-            </div> -->
+            </div>
         </li>
         <li>
-            <div>
+            <div class="Menu">
                 TERMINACION 
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15" fill="none">
                     <path d="M9 15L17.6603 0H0.339746L9 15Z" fill="black"/>
                 </svg>
             </div>
+            <div class="DropDown">
+                <ul>
+                    <li>ROJO</li>
+                    <li>AMARILLO</li>
+                    <li>VERDE</li>
+                    <li>MORADO</li>
+                    <li>AZUL</li>
+                </ul>
+            </div>
         </li>
         <li>
-            <div>
+            <div class="Menu">
                 RANGO 
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15" fill="none">
                     <path d="M9 15L17.6603 0H0.339746L9 15Z" fill="black"/>
                 </svg>
             </div>
+            <div class="DropDown">
+                <ul>
+                    <li>ROJO</li>
+                    <li>AMARILLO</li>
+                    <li>VERDE</li>
+                    <li>MORADO</li>
+                    <li>AZUL</li>
+                </ul>
+            </div>
         </li>
         <li>
-            <div>
+            <div class="Menu">
                 ESTILO 
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15" fill="none">
                     <path d="M9 15L17.6603 0H0.339746L9 15Z" fill="black"/>
                 </svg>
             </div>
+            <div class="DropDown">
+                <ul>
+                    <li>ROJO</li>
+                    <li>AMARILLO</li>
+                    <li>VERDE</li>
+                    <li>MORADO</li>
+                    <li>AZUL</li>
+                </ul>
+            </div>
         </li>
         <li>
-            <div>
+            <div class="Menu">
                 TIPO 
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15" fill="none">
                     <path d="M9 15L17.6603 0H0.339746L9 15Z" fill="black"/>
                 </svg>
+            </div>
+            <div class="DropDown">
+                <ul>
+                    <li>ROJO</li>
+                    <li>AMARILLO</li>
+                    <li>VERDE</li>
+                    <li>MORADO</li>
+                    <li>AZUL</li>
+                </ul>
             </div>
         </li>
     </ul>
@@ -61,7 +97,7 @@
     .FiltroColores{
         list-style: none;
         justify-content: center;
-        align-items: center;
+        align-items: start;
         color: black;
         font-size: 20px;
         font-style: normal;
@@ -109,9 +145,17 @@
         position: relative;
     }
     .DropDown{
-        position: absolute;
-        z-index: 1;
+        /* position: absolute; */
+        z-index: 600;
+        display: none;
+        /* height: 100%; */
+        /* background-color: #F7F7F7; */
     }
+    /* @media(min-width: 480px){
+        .DropDown{
+            position: absolute;
+        }
+    } */
     .DropDown>ul{
         display: flex;
         flex-direction: column;
@@ -120,9 +164,19 @@
         gap: 5px;
     }
     .DropDown>ul>li{
-        background-color: red;
         margin: 10;
-        width: 100%;
+        /* width: 100%; */
+        list-style: none;
+        margin: 0 5px;
+        transition: all 0.2s ease-in-out;
+    }
+    .DropDown>ul>li:hover{
+        font-weight: bold;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
+    li.Activo .DropDown{
+        display: block;
     }
 </style>
 <script>
@@ -137,4 +191,17 @@
 			Navegacion?.classList.remove("Activo");
 		}
 	})
+    let MenuFiltro = document.querySelectorAll('.Menu');
+    MenuFiltro?.forEach( Menu => {
+        Menu.addEventListener('click',()=>{
+            var Padre = Menu.parentNode;
+            console.log(Padre)
+            if(!Padre?.classList.contains('Activo'))
+            {
+                Padre?.classList.add("Activo");
+            }else{
+                Padre?.classList.remove("Activo");
+            }
+        })
+    })
 </script>
