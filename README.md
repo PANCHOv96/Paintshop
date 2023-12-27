@@ -11,7 +11,7 @@ lading page para aprender el funcionamiento del freamwork astro 3.0
 
 ## Screenshots
 
-![App Screenshot](https://raw.githubusercontent.com/PANCHOv96/ApiClima/blob/main/public/logo192.png)
+![App Screenshot](https://github.com/PANCHOv96/Paintshop/blob/main/public/Imagen/GifPaintshop.gif)
 
 
 ## Instalación 
